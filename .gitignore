@@ -9,6 +9,9 @@
 *.dylib
 *.dll
 
+.cproject
+.project
+.settings/
 # Compiled Static libraries
 *.lai
 *.la
