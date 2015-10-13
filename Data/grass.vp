@@ -1,0 +1,19 @@
+//
+
+uniform float time;
+varying float height;
+
+//
+
+void main()
+{
+  vec4 vertex = gl_Vertex;
+  height = sin(vertex.x*2.0+time)*cos(vertex.y*8.0+time);
+  //vertex.z += height/1.0;
+  //vertex.x += height/2;
+  //vertex.y += height/8;
+  vertex.x += sin(time/240.0)*vertex.y/5.0*vertex.z;
+  vertex.y += sin(time/10000.0)*vertex.x;//*sin(vertex.x/10);
+  //vertex.z += sin(time/1000)*vertex.z;
+  gl_Position = gl_ModelViewProjectionMatrix*vertex;
+}

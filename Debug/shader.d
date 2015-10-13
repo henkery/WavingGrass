@@ -1,0 +1,1 @@
+shader.d: ../shader.cpp
